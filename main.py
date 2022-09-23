@@ -5,7 +5,7 @@ import sys
 def main():
     print("Hello World!")
     print(sys.version)
-    print("Thjjjjje sys path is", sys.path)
+    print("Thjjjjj n ne sys path is", sys.path)
 
 
 class MyClass:
