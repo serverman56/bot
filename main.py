@@ -10,4 +10,3 @@ def main():
 
 def test():
     print("This is a test")
-    return 0
