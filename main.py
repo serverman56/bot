@@ -8,8 +8,6 @@ def main():
     print("The sys path is", sys.path)
 
 
-def test():
-    print("This is a test")
-    
-if __name__ == "__main__":
-    main()
+class MyClass:
+    def __init__(self):
+        print("Hello World!")
