@@ -1,21 +1,21 @@
-# make a python bot to automate the process of downloading the files from the website
-
+# make a function to get all repo links of a user in github
 import requests
-import os
-import time
-import sys
-import re
-import json
-import urllib.request
-import urllib.parse
-import urllib.error
+from bs4 import BeautifulSoup
 
-# get the url of the website
-url = "http://www.astro.louisville.edu/software/spacepy/"
-path = str(os.getcwd()) + '/data/'
-filled = False
 
-# get the html of the website
-r = requests.get(url)
-html = r.text
-print(html)
+def get_all_repo_links(username):
+    """Get all repo links of a user in github"""
+    url = f"https://github.com/{username}?tab=repositories"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    repo_links = []
+    for link in soup.find_all("a"):
+        href = link.get("href")
+        if href.startswith(f"/{username}/"):
+            repo_links.append(f"https://github.com{href}")
+    return repo_links
+
+
+repoLinks = get_all_repo_links("OCEANOFANYTHINGOFFICIAL")
+for link in repoLinks:
+    print(link)
