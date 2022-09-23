@@ -10,4 +10,4 @@ def main():
 
 class MyClass:
     def __init__(self):
-        print("ello World!")
+        print("ghrello World!")
