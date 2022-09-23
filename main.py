@@ -7,3 +7,7 @@ def main():
     print(sys.version)
     print("The sys path is", sys.path)
     return 0
+
+def test():
+    print("This is a test")
+    return 0
