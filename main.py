@@ -7,7 +7,10 @@ def main():
     print(sys.version)
     print("Thjjjghghjjjj n ne sys path is", sys.path)
 
+    
+    
 
 class MyClass:
     def __init__(self):
         print("ghbngrello World!thgyrt.rjytj")
+        
